@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+    <meta name="format-detection" content="telephone=no"> 
+    <title>爪哇部落-二维码签到</title>
+    <link href="./css/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="contain">
+        <!-- 设置进入动画 -->
+        <div class="active">
+            <p class="shadow"></p>
+            <p class="mountain"></p>
+        </div>
+        <!-- 表单模块 -->
+        <form action="http://www.javatribe.org:3000/login" name="form" method="get" class="form_css" onsubmit="return formCheck()">
+            <p class="water tips"></p>
+            <ul>
+                <input id="j-num" type="text" name="num" placeholder="学号">
+                <input id="j-name" type="text" name="name" placeholder="姓名">
+                <input type="reset" name="reset" value="重置">
+                <input type="submit" name="submit" value="签到">
+            </ul>
+        </form>  
+        <p class="title"></p>  
+    </div>
+    <script>
+        function formCheck(){
+            var num = document.getElementById('j-num').value;
+            var name = document.getElementById('j-name').value;
+            if(num.length == 0 || name.length == 0){
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
